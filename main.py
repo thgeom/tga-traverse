@@ -209,7 +209,7 @@ def main(argv):
             travpointx[-2].P = tcp.endP                          # Set 3rd Control point coordinate @End
             travpointx[-2].fazi = tcp.endAzi
             travpointx[-1].P = tcp.endPo                         # Set 4th Control point coordinate
-
+        tcp.batch = batch
         tcp.showTCPdata()           # Print Control points
         #tcp.UTM_COMP = True
         if not batch:
