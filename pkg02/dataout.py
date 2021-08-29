@@ -73,7 +73,7 @@ class Trav4OutFile:
         try:
             writer = pd.ExcelWriter(self.xlsname, mode='w')
         except:
-            msg = 'Output File : {} : is in used.!!!'.format(self.xlsname)
+            msg = 'Excel File : {} : is in used.!!!'.format(self.xlsname)
             msg += '\nPlease close it, then process again.'
             #show_message(msg)    # Case file is inused
             warn_message(msg, tcp.batch)    # Case file is inused
