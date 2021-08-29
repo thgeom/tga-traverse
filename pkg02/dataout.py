@@ -76,7 +76,7 @@ class Trav4OutFile:
             msg = 'Output File : {} : is in used.!!!'.format(self.xlsname)
             msg += '\nPlease close it, then process again.'
             #show_message(msg)    # Case file is inused
-            warn_message(msg)    # Case file is inused
+            warn_message(msg, tcp.batch)    # Case file is inused
             #sys.exit(1)
             #os._exit(os.O_RDONLY)
             writer = None
