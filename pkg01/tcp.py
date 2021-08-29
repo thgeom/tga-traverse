@@ -25,6 +25,7 @@ class TravControlParams:
     UTM_COMP = False
     UTM_Zone = '-'
     EPSG = None
+    batch = False
     #infilename = ''
 
     def __init__(self, proj_dict):
