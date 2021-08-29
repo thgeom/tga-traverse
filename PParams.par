@@ -1,0 +1,29 @@
+{
+"ProjName" : "Learning Community",
+"Location" : "UdonThani Province",
+"Organization" : "Community Section 1",
+"Compute" : "TGA",
+"CSF" : 1.00000,
+"EPSG" : 32647,
+"WorkDirectory" : "d:/TGA_TEST/CB/",
+"ControlPointFile" : "travlbr2.csv",
+"CPF_Columns" : ["Name", "East", "NORTH", "ELEV", "Code", "UTM"],  #List of required column name, case insensitive
+"CPF_Append" : False,
+"ObservDataFile" : "trav-1.csv",
+"ODF_Columns" : ["Name", "HorAng", "HorDist"],
+"OutputFile" : "Trav-1_out2.xlsx",
+"StartAzimuth" : 0.0
+}
+# Note:
+# ProjectName = Name of the Project
+# Location = Location of the Project
+# Oranization = Name of Organization
+# CSF = Common Scale Factor
+# EPSG = Code of Coordinate Reference System for Map projection, "EPSG" : None,  for None
+# List of folder & files 
+#===============
+# WorkDirectory  =  "d:/TGA_Test/"
+# ControlPointFile = "travlbr.csv"   ; case insensitive
+# ObservDataFile =  "loop-2.csv"   ; case insensitive
+# OutputFile =  "Loop-2_out.xlsx"
+# StartAzimuth  = 0.0  (dd.mmsss) ; Case of Known one pont & started Azimuth
