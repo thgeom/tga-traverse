@@ -219,15 +219,15 @@ class Trav4OutFile:
             #pt[4] = pt[4] + ' '
         #if trvctpar.params_dict['CPF_Append']:
         for trv in travpoints_c[1:]:
-            #cp_rec = {'NAME':trv.name, 'EAST':'{:8.3f}'.format(trv.P[0]), 'NORTH':'{:8.3f}'.format(trv.P[1]), 'ELEV':0.0, 'CODE':'CTP', 'UTM':self.UTM_Zone}
-            #cp_rec = {'NAME':trv.name, 'EAST':trv.P[0], 'NORTH':trv.P[1], 'ELEV':'-', 'CODE':'CTP', 'UTM':self.UTM_Zone}
+            #cp_rec = {'NAME':trv.name, 'EAST':'{:8.3f}'.format(trv.P[0]), 'NORTH':'{:8.3f}'.format(trv.P[1]), 'ELEV':0.0, 'CODE':trv.code, 'UTM':tcp.UTM_Zone}
+            #cp_rec = {'NAME':trv.name, 'EAST':trv.P[0], 'NORTH':trv.P[1], 'ELEV':'-', 'CODE':trv.code, 'UTM':tcp.UTM_Zone}
             cp_rec = {'NAME':trv.name, 'EAST':round(trv.P[0],3), 'NORTH':round(trv.P[1],3), 'ELEV':trv.z, 'CODE':trv.code, 'UTM':tcp.UTM_Zone}
 
             #print('Result : {}'.format(cp_rec))
             self.csvtab = self.csvtab.append(cp_rec, ignore_index=True)
-        self.show_csvtab()
+        self.show_table()
 
-    def show_csvtab(self):
+    def show_table(self):
         print('>>>Result of Travers Point Coordinates')
         print(self.csvtab.to_string(index=False))
 
@@ -256,5 +256,5 @@ class Trav4OutFile:
             success = True
         except:
             msg = 'CSV File : {} : is in used.!!!'.format(self.csvname)
-            warn_message(msg)
+            warn_message(msg, tcp.batch)
         return success
