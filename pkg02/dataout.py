@@ -174,7 +174,7 @@ class Trav4OutFile:
             worksheet.write(7, scol+6, 'Computed Date : {}'.format(datetime.datetime.now().date()), title2_format)
 
         # Case of writer is OK
-        if writer!=None:
+        if writer is not None:
             df.to_excel(writer, sheet_name='Traverse_Comp', startrow=srow)
             workbook = writer.book
             #print(dir(workbook))
