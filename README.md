@@ -6,4 +6,4 @@
 # the working directory, control point file and observation data file have been defined as
 # "WorkDirectory", "ControlPointFile" and "ObservDataFile"; the example files are included
 # For traverse adjustmet, compass rule has been used in computation process.
-# The Excel file report shall be gereated as a rusult of computation
+# The Excel file report shall be generated as a rusult of computation
