@@ -53,7 +53,7 @@ class TravControlParams:
     # Set Map parameters
     def setMapProjection(self):
         epsg = self.EPSG
-        if epsg!=None:
+        if epsgis not None:
             self.crs = CRS.from_epsg(epsg)
             self.utm = Proj(self.crs)
             self.projto = Transformer.from_crs(self.crs, crs_WGS84, always_xy=True)
