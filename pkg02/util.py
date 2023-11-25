@@ -74,6 +74,21 @@ def d_m_s(d, dp=1):
     if is_negative: dd = - dd
     return '{:d}-{}-{}'.format(dd, mm, ss)
 
+# To convert Area in square meters to Rai-Ngan-Wa, "prec" is the precision of square Wa
+def r_n_w(sqm, prec=1):
+    is_negative = sqm < 0
+    sqm = abs(sqm)
+    wa = sqm / 4.0
+    rr = wa / 400.0
+    r = int(rr)
+    ng = int((rr - r) * 4)
+    wa = wa - (r * 400) - (ng * 100)
+    ng = str(ng)
+    wa = str(round(wa, prec))
+    if prec==0:
+        wa = wa[0:-2]
+    if is_negative: r = - r
+    return '{:d}-{}-{}'.format(r, ng, wa)
 
 # Status message
 def statusbox(label_id, msg, nrow=4):
